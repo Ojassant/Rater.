@@ -1,0 +1,69 @@
+body{
+    font-family:lobster,cursive;
+    margin: auto;
+    background:#50566D;
+    background-size: cover;
+    background-position-x: center;
+    display: flex;
+    gap: 20px;
+}
+.info-pane{
+    width: 415px;
+    height: 950px;
+    border: rgba(188, 176, 141) solid 3px;
+    padding-left: 100px;
+    background-color: #6d6750;
+    justify-self: flex-end;
+}
+h1{
+    text-align: left;
+}
+.rating-item{
+    padding-top: 15px;
+}
+.rating-item:hover{
+    color: #50566D;
+}
+.logo{
+    background-image: url(./logo.png);
+    background-size: cover;
+    background-position-x: center;
+    width: 100px;
+    height: 100px;
+    border: #6d6750 solid 5px;
+    border-radius: 50%;
+ /**   flex-shrink: 0; **/
+     transition: transform 2s ease-in-out;
+}
+.logo:hover{
+    transform: rotate(360deg);
+}
+/**rgba(188, 176, 141), #6d6750**/
+input{
+    background-color: #d8dadf;
+}
+.navbar{
+    height: 100px;
+    background-color: #6d6750;
+    width: 1500px;
+    padding: 10px;
+    border: rgba(188, 176, 141, 1) solid 3px;
+    display: flex;
+    gap: 20px;
+    position: relative; /* allow absolute centering of .searchbar */
+    align-items: center;
+}
+.searchbar{
+    height: 50px;
+    width: 400px;
+    /* center this element absolutely within the navbar */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* add transition so both hover-in and hover-out animate */
+    transition: width 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.searchbar:hover{
+    width: 600px;
+}
