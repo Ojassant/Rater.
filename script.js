@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			result.textContent = 'No numbers';
 			return;
 		}
+		if (numbers.length >= 100) {
+			result.textContent = 'Limit: 100';
+			return;
+		}
 
 		const sum = numbers.reduce((a, b) => a + b, 0);
 		const avg = sum / numbers.length;
