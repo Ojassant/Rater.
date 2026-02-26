@@ -19,6 +19,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			return;
 		}
 
+		// reject any value outside 0–100
+		const invalid = numbers.filter(n => n < 0 || n > 100);
+		if (invalid.length) {
+			result.textContent = 'All ratings must be between 0 and 100';
+			return;
+		}
+
 		const sum = numbers.reduce((a, b) => a + b, 0);
 		const avg = sum / numbers.length;
 		result.textContent = avg.toFixed(2);
