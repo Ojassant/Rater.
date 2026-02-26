@@ -64,29 +64,18 @@ input{
 .searchbar{
     height: 50px;
     width: 70%;              
-    max-width: 400px;
-    position: static;         
-    margin: 0 auto;          
-    transform: none;
-    transition: width 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.searchbar{
-    height: 50px;
     width: 400px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     transition: width 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
 .searchbar:hover{
     width: 600px;
 }
 
 @media (max-width: 480px) {
     .info-pane { padding: 10px; }
-    .navbar { padding: 5px; height: auto; }
-    .searchbar { width: 100%; }
+    .navbar { padding: 5px; height: auto; justify-content: center; flex-direction: column; }
+    .searchbar { width: 100%; margin-top: 10px; }
 }
 
 
