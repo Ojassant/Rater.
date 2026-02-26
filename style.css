@@ -5,14 +5,22 @@ body{
     background-size: cover;
     background-position-x: center;
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
+
+input, label {
+    max-width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
 .info-pane{
-    width: 415px;
-    height: 950px;
+    width: 90%;             
+    max-width: 415px;          
     border: rgba(188, 176, 141) solid 3px;
-    padding-left: 100px;
+    padding: 20px;             
     background-color: #6d6750;
+    box-sizing: border-box;   
     justify-self: flex-end;
 }
 h1{
@@ -32,7 +40,6 @@ h1{
     height: 100px;
     border: #6d6750 solid 5px;
     border-radius: 50%;
- /**   flex-shrink: 0; **/
      transition: transform 2s ease-in-out;
 }
 .logo:hover{
@@ -45,25 +52,41 @@ input{
 .navbar{
     height: 100px;
     background-color: #6d6750;
-    width: 1500px;
+    width: 100%;             
     padding: 10px;
     border: rgba(188, 176, 141, 1) solid 3px;
     display: flex;
     gap: 20px;
-    position: relative; /* allow absolute centering of .searchbar */
+    position: relative;
     align-items: center;
+}
+
+.searchbar{
+    height: 50px;
+    width: 70%;              
+    max-width: 400px;
+    position: static;         
+    margin: 0 auto;          
+    transform: none;
+    transition: width 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .searchbar{
     height: 50px;
     width: 400px;
-    /* center this element absolutely within the navbar */
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    /* add transition so both hover-in and hover-out animate */
     transition: width 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .searchbar:hover{
     width: 600px;
 }
+
+@media (max-width: 480px) {
+    .info-pane { padding: 10px; }
+    .navbar { padding: 5px; height: auto; }
+    .searchbar { width: 100%; }
+}
+
+
